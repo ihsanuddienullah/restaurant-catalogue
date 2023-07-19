@@ -1,0 +1,132 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .header {
+    position: relative;
+  }
+
+  #drawer {
+    display: none;
+  }
+
+  #drawer__mobile {
+    display: block;
+    width: 100%;
+    position: absolute;
+
+    /* menyembunyikan #drawer -250px (sesuai dengan ukuran lebar drawer) ke kiri */
+    transform: translate(0, -300px);
+    transition: transform 0.3s ease-in-out;
+    background-color: white;
+  }
+
+  #drawer__mobile.open {
+    transform: translate(0, 0);
+  }
+
+  .nav__item {
+    display: block;
+  }
+
+  .hero {
+    background-image: url("../public/images/sharp/hero-image_4-small.jpg"),
+      url("../public/images/heros/hero-image_4.jpg");
+    background-size: cover;
+  }
+
+  .restaurant .restaurant-img__wrapper,
+  .restaurant-info__wrapper {
+    flex-direction: column;
+  }
+
+  .restaurant__description {
+    font-size: 18px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .restaurants {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .restaurant-item__thumbnail {
+    height: 300px;
+  }
+
+  #drawer {
+    display: inline-block;
+  }
+
+  #hamburger {
+    display: none;
+  }
+
+  .restaurant .restaurant-img__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .restaurant__description {
+    font-size: 20px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .restaurants {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .restaurant-item__thumbnail {
+    height: 400px;
+  }
+
+  .hero__title {
+    font-size: 38px;
+  }
+
+  .hero__tagline {
+    font-size: 20px;
+  }
+
+  .restaurant .restaurant-img__wrapper,
+  .restaurant-info__wrapper {
+    flex-direction: row;
+    align-items: normal;
+  }
+
+  .restaurant__description {
+    font-size: 24px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .headline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .restaurants {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .restaurant-item__thumbnail {
+    height: 500px;
+  }
+
+  .hero__title {
+    font-size: 44px;
+  }
+
+  .hero__tagline {
+    font-size: 24px;
+  }
+
+  .content__label {
+    font-size: 32px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
